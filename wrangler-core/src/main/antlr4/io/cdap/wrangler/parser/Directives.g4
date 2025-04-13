@@ -36,7 +36,16 @@ options {
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+
 }
+
+
+BYTE_SIZE: [0-9]+ BYTE_UNIT;
+TIME_DURATION: [0-9]+ TIME_UNIT;
+
+fragment BYTE_UNIT: ('KB' | 'MB' | 'GB' | 'TB' | 'B');
+fragment TIME_UNIT: ('ms' | 's' | 'm' | 'h' | 'd');
+
 
 /**
  * Parser Grammar for recognizing tokens and constructs of the directives language.
